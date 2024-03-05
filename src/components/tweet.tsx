@@ -146,6 +146,8 @@ export default function Tweet({ username, photo, tweet, userId, id }: ITweet) {
   const [editing, isEditing] = useState(false);
   const [newtweet, setNewTweet] = useState("");
   const [file, setFile] = useState<File | null>(null);
+  //   const [isEdited, setIsEdited] = useState(false);
+  //   let isEdited = false;
   const user = auth.currentUser;
   const onDelete = async () => {
     const ok = confirm("Are you sure you want to delete this tweet?");
@@ -182,6 +184,8 @@ export default function Tweet({ username, photo, tweet, userId, id }: ITweet) {
   };
 
   const onSubmit = async () => {
+    // isEdited = true;
+    // setIsEdited(true);
     isEditing(false);
     const user = auth.currentUser;
     if (!user) return;
@@ -216,7 +220,10 @@ export default function Tweet({ username, photo, tweet, userId, id }: ITweet) {
   return (
     <Wrapper>
       <Column>
-        <Username>{username}</Username>
+        <Username>
+          {username}
+          {/* {isEdited ? "수정됨🖋" : ""} */}
+        </Username>
         {editing ? (
           <EditingArea
             required
