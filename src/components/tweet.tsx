@@ -26,11 +26,7 @@ const Column = styled.div`
     /* place-self: center; */
   }
 `;
-const Row = styled.div`
-  /* display: grid;
-  grid-template-rows: 2fr; */
-  /* justify-content: space-between; */
-`;
+
 const Username = styled.span`
   font-weight: 600;
   font-size: 15px;

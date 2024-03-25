@@ -1,3 +1,5 @@
+src/routes/firebase.ts
+
 # Logs
 logs
 *.log
